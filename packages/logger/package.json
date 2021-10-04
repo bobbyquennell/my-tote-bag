@@ -1,0 +1,21 @@
+{
+  "name": "logger",
+  "version": "1.0.0",
+  "main": "dist/index",
+  "types": "dist/index",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "tsc -b tsconfig.build.json --clean",
+    "format": "../../node_modules/.bin/prettier --write \"./**/*.{ts,js,json,md}\" --ignore-path ../../.prettierignore",
+    "lint": "eslint . --ext .js,.ts --ignore-path='../../.eslintignore'",
+    "lint:fix": "eslint . --ext .js,.ts --fix --ignore-path='../../.eslintignore'",
+    "compile": "tsc -b tsconfig.build.json",
+    "build": "npm run clean && npm run compile",
+    "ts-check": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.2"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "clean": "tsc -b tsconfig.build.json --clean",
+    "format": "../../node_modules/.bin/prettier  --write \"./**/*.{ts,js,json,md}\" --ignore-path ../../.prettierignore",
+    "lint": "eslint . --ext .js,.ts --ignore-path='../../.eslintignore'",
+    "lint:fix": "eslint . --ext .js,.ts --fix --ignore-path='../../.eslintignore'",
+    "compile": "tsc -b tsconfig.build.json",
+    "build": "npm run clean && npm run compile",
+    "ts-check": "tsc -p tsconfig.json --noEmit",
+    "start-dev": "../../node_modules/.bin/ts-node src/index.ts",
+    "start-dev:watch": "../../node_modules/.bin/ts-node-dev --respawn --transpile-only src/index.ts"
+  },
+  "dependencies": {
+    "logger": "1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.2"
+  }
+}

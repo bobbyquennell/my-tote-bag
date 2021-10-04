@@ -1,0 +1,28 @@
+{
+  "name": "@shared/eslint-config",
+  "version": "0.0.1",
+  "description": "Shareable ESLint configuration",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
+    "@typescript-eslint/parser": "^4.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.29.0",
+    "typescript": "^4.3.4"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.1.0",
+    "typescript": ">=3.9.3"
+  }
+}

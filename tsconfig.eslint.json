@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    // "composite": true,
+    // "outDir": "./dist",
+    // "rootDir": ".",
+    // "declaration": true,
+    // "noImplicitAny": true,
+    // "esModuleInterop": true,
+    // "lib": [ "es6" ]
+    "types": ["@types/node"],
+    "noEmit": true,
+    "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "@shared/*":["shared/*/src"],
+      "*":["packages/*/src"] //this is where the magic happens, "import logger from "logger"" will work without compile
+    }
+  },
+}

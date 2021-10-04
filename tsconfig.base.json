@@ -1,0 +1,25 @@
+{
+  /* Basic TS Config in monorepo root level,
+   - can be extended from "packages/{packageA}/tsconfig.build.json"
+   - can be extended from "root/tsconfig.eslint.json",
+    where we put "paths" aliases and other "compilerOptions" for test/IDE settings
+   */
+   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "pretty": true,
+    "sourceMap": true,
+    "strict": true,
+    "target":"ES2017",
+    "lib": ["ES2017"]
+  }
+}

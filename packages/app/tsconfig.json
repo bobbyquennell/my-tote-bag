@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    "composite": false,
+    "rootDir": "."
+  },
+  "references": [
+    { "path": "../logger/tsconfig.build.json" }
+  ],
+  "include": ["src", "tests", "tools"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "tests/fixtures"
+  ],
+}
