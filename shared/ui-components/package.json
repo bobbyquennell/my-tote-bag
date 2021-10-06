@@ -8,7 +8,8 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production webpack"
+    "build": "NODE_ENV=production webpack",
+    "start": "NODE_ENV=development webpack serve"
   },
   "dependencies": {
     "@capsizecss/core": "^3.0.0",
@@ -28,8 +29,7 @@
     "@testing-library/react-hooks": "^7.0.1",
     "@types/react": "^17.0.15",
     "@types/react-dom": "^17.0.9",
-    "@vanilla-extract/babel-plugin": "^1.0.1",
-    "@vanilla-extract/webpack-plugin": "^2.0.0",
+    "@vanilla-extract/webpack-plugin": "^2.1.0",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "css-loader": "^6.2.0",
