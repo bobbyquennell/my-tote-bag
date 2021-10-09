@@ -38,17 +38,16 @@ function App({ userName, children, ...rest }: AppProps) {
       <StyledButton>hello, I am from emotion</StyledButton>
       {greeter(userName)}
       {children}
-      <Box className={vanillaStyle} css={capsizeStyles}>
-        Hello World
-      </Box>
-      <Box className={vanillaStyle} css={capsizeStyles}>
-        Hello World
-      </Box>
-      <Box component='h1' className={vanillaStyle} css={capsizeStyles}>
-        Hello World
-      </Box>
-      <Box component='h1' className={vanillaStyle} css={capsizeStyles}>
-        Hello World
+      <Box
+        display={{ xs: 'none', sm: 'block', xl: 'flex' }}
+        padding={['none', 'small', 'medium', 'large']}
+      >
+        <Box style={{ border: 'solid 1px yellow', flexBasis: '50%' }}>
+          Hello World
+        </Box>
+        <Box style={{ border: 'solid 1px yellow', flexBasis: '50%' }}>
+          Hello World2
+        </Box>
       </Box>
     </div>
   );
