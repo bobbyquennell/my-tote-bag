@@ -6,6 +6,7 @@ import styles from './index.module.scss';
 import classnames from 'classnames';
 import { Global } from '@emotion/react';
 import { globalStyles } from 'styles/globalStyles';
+import {Box} from '@shared/ui-components';
 
 render(
   <App
@@ -14,8 +15,9 @@ render(
     style={{ margin: 20, border: '1px solid black' }}
   >
     <Global styles={globalStyles}></Global>
-    <div className="green-title">Green</div>
-    <div className={classnames(styles.redTitle, styles.bigFont)}>Red</div>
+    <Box className="green-title">Green</Box>
+    <Box className={classnames(styles.redTitle, styles.bigFont)}>Red</Box>
+    <Box className={classnames(styles.redTitle, styles.bigFont)}>I'm Red from Box component</Box>
   </App>,
   document.getElementById('root'),
 );

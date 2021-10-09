@@ -1,14 +1,14 @@
 {
-  "name": "@shared/ui-components",
+  "name": "admin-ui",
   "version": "0.0.1",
-  "description": "Shareable UI Components, Layout, Stack, Box, etc",
+  "description": "admin ui",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "private": true,
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production tsc",
+    "build": "NODE_ENV=production webpack",
     "start": "NODE_ENV=development webpack serve"
   },
   "dependencies": {
@@ -16,6 +16,7 @@
     "@capsizecss/vanilla-extract": "^1.0.0",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
+    "@shared/ui-components": "^0.0.1",
     "@vanilla-extract/css": "^1.4.0",
     "classnames": "^2.3.1",
     "clsx": "^1.1.1",

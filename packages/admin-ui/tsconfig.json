@@ -25,5 +25,5 @@
     "sourceMap": true,
     "target": "ES2020"
   },
-  "include": ["index.ts", "Box"]
+  "include": ["src", "index.ts"]
 }
