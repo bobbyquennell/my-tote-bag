@@ -25,7 +25,36 @@ const responsiveAtomicProperties = defineProperties({
       inlineBlock: 'inline-block',
       flex: 'flex',
     },
-    flexDirection: ['row', 'column'],
+    // flex container properties
+    flexDirection: {
+      row: 'row',
+      rowReverse: 'row-reverse',
+      column: 'column',
+      columnReverse: 'column-reverse',
+    },
+    flexWrap: { nowrap: 'nowrap', wrap: 'wrap', wrapReverse: 'wrap-reverse' },
+    justifyContent: {
+      flexStart: 'flex-start',
+      flexEnd: 'flex-end',
+      center: 'center',
+      spaceBetween: 'space-between',
+      spaceAround: 'space-around',
+      spaceEvenly: 'space-evenly',
+    },
+    alignItems: {
+      flexStart: 'flex-start',
+      center: 'center',
+      flexEnd: 'flex-end',
+    },
+    // flex item properties
+    flexGrow: [0, 1],
+    flexShrink: [0],
+    alignSelf: {
+      auto: 'auto',
+      flexStart: 'flex-start',
+      flexEnd: 'flex-end',
+      center: 'center',
+    },
     paddingTop: space,
     paddingBottom: space,
     paddingLeft: space,
@@ -42,6 +71,7 @@ const responsiveAtomicProperties = defineProperties({
     margin: ['marginTop', 'marginBottom', 'marginLeft', 'marginRight'],
     marginX: ['marginLeft', 'marginRight'],
     marginY: ['marginTop', 'marginBottom'],
+    flexFlow: ['flexDirection', 'flexWrap'],
   },
 });
 
