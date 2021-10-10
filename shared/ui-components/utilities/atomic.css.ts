@@ -18,7 +18,13 @@ const responsiveAtomicProperties = defineProperties({
   defaultCondition: 'xs',
   responsiveArray: ['xs', 'sm', 'md', 'lg', 'xl'],
   properties: {
-    display: ['none', 'block', 'flex'],
+    display: {
+      none: 'none',
+      block: 'block',
+      inline: 'inline',
+      inlineBlock: 'inline-block',
+      flex: 'flex',
+    },
     flexDirection: ['row', 'column'],
     paddingTop: space,
     paddingBottom: space,
