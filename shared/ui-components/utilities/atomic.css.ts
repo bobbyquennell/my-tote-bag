@@ -7,7 +7,7 @@ const space = {
   large: '16px',
 };
 
-const responsiveProperties = defineProperties({
+const responsiveAtomicProperties = defineProperties({
   conditions: {
     xs: {}, //mobile
     sm: { '@media': `screen and (min-width: 600px)` }, // tablet
@@ -24,12 +24,19 @@ const responsiveProperties = defineProperties({
     paddingBottom: space,
     paddingLeft: space,
     paddingRight: space,
+    marginTop: space,
+    marginBottom: space,
+    marginRight: space,
+    marginLeft: space,
   },
   shorthands: {
     padding: ['paddingTop', 'paddingBottom', 'paddingLeft', 'paddingRight'],
     paddingX: ['paddingLeft', 'paddingRight'],
     paddingY: ['paddingTop', 'paddingBottom'],
+    margin: ['marginTop', 'marginBottom', 'marginLeft', 'marginRight'],
+    marginX: ['marginLeft', 'marginRight'],
+    marginY: ['marginTop', 'marginBottom'],
   },
 });
 
-export const sprinkles = createSprinkles(responsiveProperties);
+export const sprinkles = createSprinkles(responsiveAtomicProperties);

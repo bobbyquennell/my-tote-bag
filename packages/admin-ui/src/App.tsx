@@ -39,13 +39,33 @@ function App({ userName, children, ...rest }: AppProps) {
       {greeter(userName)}
       {children}
       <Box
-        display={{ xs: 'none', sm: 'block', xl: 'flex' }}
-        padding={['none', 'small', 'medium', 'large']}
+        display={{ xs: 'block', sm: 'flex' }}
+        padding={['small', 'small', 'medium', 'large']}
+        style={{
+          border: 'solid 1px red',
+          background: 'orange',
+        }}
       >
-        <Box style={{ border: 'solid 1px yellow', flexBasis: '50%' }}>
+        <Box
+          style={{
+            border: 'solid 1px yellow',
+            flexBasis: '50%',
+            background: 'lightblue',
+          }}
+          padding={{ xs: 'small', sm: 'medium' }}
+          margin={{ xs: 'small' }}
+        >
           Hello World
         </Box>
-        <Box style={{ border: 'solid 1px yellow', flexBasis: '50%' }}>
+        <Box
+          style={{
+            border: 'solid 1px yellow',
+            flexBasis: '50%',
+            background: 'pink',
+          }}
+          padding={{ xs: 'small', sm: 'medium' }}
+          margin={{ xs: 'small' }}
+        >
           Hello World2
         </Box>
       </Box>
