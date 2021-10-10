@@ -5,7 +5,7 @@ import greeter from 'greeter';
 import styled from '@emotion/styled';
 import { createStyleObject } from '@capsizecss/core';
 import { vanillaStyle } from 'vanillaExtract.css';
-import { Box } from '@shared/ui-components';
+import { Box, Flex } from '@shared/ui-components';
 interface AppProps extends React.ComponentProps<'div'> {
   userName: string;
   children: React.ReactNode;
@@ -38,8 +38,7 @@ function App({ userName, children, ...rest }: AppProps) {
       <StyledButton>hello, I am from emotion</StyledButton>
       {greeter(userName)}
       {children}
-      <Box
-        display={{ xs: 'block', sm: 'flex' }}
+      <Flex
         padding={['small', 'small', 'medium', 'large']}
         style={{
           border: 'solid 1px red',
@@ -68,7 +67,7 @@ function App({ userName, children, ...rest }: AppProps) {
         >
           Hello World2
         </Box>
-      </Box>
+      </Flex>
       <Box
         style={{ background: 'lightBlue' }}
         paddingLeft="large"
