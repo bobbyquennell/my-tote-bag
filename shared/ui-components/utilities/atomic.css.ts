@@ -63,6 +63,7 @@ const responsiveAtomicProperties = defineProperties({
     marginBottom: space,
     marginRight: space,
     marginLeft: space,
+    textAlign: ['center', 'left', 'right'],
   },
   shorthands: {
     padding: ['paddingTop', 'paddingBottom', 'paddingLeft', 'paddingRight'],

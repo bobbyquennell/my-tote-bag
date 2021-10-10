@@ -69,6 +69,15 @@ function App({ userName, children, ...rest }: AppProps) {
           Hello World2
         </Box>
       </Box>
+      <Box
+        style={{ background: 'lightBlue' }}
+        paddingLeft="large"
+        margin={'large'}
+      >
+        <Box style={{ background: 'Blue' }} padding="large">
+          <Box textAlign={['center', 'left', 'right']}>paddingLeft</Box>
+        </Box>
+      </Box>
     </div>
   );
 }
