@@ -4,8 +4,8 @@ import React from 'react';
 import greeter from 'greeter';
 import styled from '@emotion/styled';
 import { createStyleObject } from '@capsizecss/core';
-import { vanillaStyle } from 'vanillaExtract.css';
-import { Box, Flex } from '@shared/ui-components';
+import { Box, Flex, Stack } from '@shared/ui-components';
+import styles from './index.module.scss';
 interface AppProps extends React.ComponentProps<'div'> {
   userName: string;
   children: React.ReactNode;
@@ -41,42 +41,56 @@ function App({ userName, children, ...rest }: AppProps) {
       <Flex
         padding={['small', 'small', 'medium', 'large']}
         style={{
-          border: 'solid 1px red',
+          border: 'solid 2px red',
           background: 'orange',
         }}
+        flexWrap="wrap"
+        className={styles.reset}
       >
+        {[1, 2, 3].map((item) => {
+          return (
+            <Box
+              key={item}
+              className={styles.reset}
+              style={{
+                border: 'solid 2px yellow',
+                flexBasis: '20%',
+                background: 'lightblue',
+              }}
+              padding={{ xs: 'small', sm: 'medium' }}
+              margin={{ xs: 'none' }}
+            >
+              Flex Item 20% {item}
+            </Box>
+          );
+        })}
         <Box
           style={{
-            border: 'solid 1px yellow',
-            flexBasis: '50%',
-            background: 'lightblue',
-          }}
-          padding={{ xs: 'small', sm: 'medium' }}
-          margin={{ xs: 'small' }}
-        >
-          Hello World
-        </Box>
-        <Box
-          style={{
-            border: 'solid 1px yellow',
-            flexBasis: '50%',
+            border: 'solid 2px yellow',
+            flexBasis: '40%',
             background: 'pink',
           }}
+          className={styles.reset}
           padding={{ xs: 'small', sm: 'medium' }}
-          margin={{ xs: 'small' }}
+          margin={{ xs: 'none' }}
         >
-          Hello World2
+          Flex Item 40%
         </Box>
       </Flex>
-      <Box
-        style={{ background: 'lightBlue' }}
-        paddingLeft="large"
-        margin={'large'}
-      >
-        <Box style={{ background: 'Blue' }} padding="large">
-          <Box textAlign={['center', 'left', 'right']}>paddingLeft</Box>
-        </Box>
-      </Box>
+      <Stack space={['small', 'medium', 'large']}>
+        {[1, 2, 3].map((item) => {
+          return (
+            <Box
+              key={item}
+              style={{ background: 'lightblue' }}
+              textAlign="center"
+              padding={['small', 'medium', 'large']}
+            >
+              stack item {item}
+            </Box>
+          );
+        })}
+      </Stack>
     </div>
   );
 }

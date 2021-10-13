@@ -1,11 +1,19 @@
-import { defineProperties, createSprinkles } from '@vanilla-extract/sprinkles';
+import {
+  defineProperties,
+  createSprinkles,
+  ConditionalValue,
+  createNormalizeValueFn,
+  RequiredConditionalValue,
+} from '@vanilla-extract/sprinkles';
 
-const space = {
+export const space = {
   none: 0,
   small: '4px',
   medium: '8px',
   large: '16px',
 };
+export type Space = keyof typeof space | 'none';
+export type ResponsiveSpace = RequiredResponsiveValue<Space>;
 
 const responsiveAtomicProperties = defineProperties({
   conditions: {
@@ -75,5 +83,13 @@ const responsiveAtomicProperties = defineProperties({
     flexFlow: ['flexDirection', 'flexWrap'],
   },
 });
+
+export type RequiredResponsiveValue<Value extends string | number> =
+  RequiredConditionalValue<typeof responsiveAtomicProperties, Value>;
+export type OptionalResponsiveValue<Value extends string | number> =
+  ConditionalValue<typeof responsiveAtomicProperties, Value>;
+export const normalizeResponsiveValue = createNormalizeValueFn(
+  responsiveAtomicProperties,
+);
 
 export const sprinkles = createSprinkles(responsiveAtomicProperties);
