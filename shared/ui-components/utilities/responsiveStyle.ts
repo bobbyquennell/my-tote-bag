@@ -1,7 +1,7 @@
 import omit from 'lodash/omit';
 import mapValues from 'lodash/mapValues';
 import { StyleRule } from '@vanilla-extract/css';
-import { breakpoints } from './brekpoints';
+import { breakpoints } from './breakpoints';
 
 type CSSProps = Omit<StyleRule, '@media' | '@supports'>;
 

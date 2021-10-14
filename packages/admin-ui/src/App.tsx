@@ -5,7 +5,6 @@ import greeter from 'greeter';
 import styled from '@emotion/styled';
 import { createStyleObject } from '@capsizecss/core';
 import { Box, Flex, Stack } from '@shared/ui-components';
-import styles from './index.module.scss';
 interface AppProps extends React.ComponentProps<'div'> {
   userName: string;
   children: React.ReactNode;
@@ -38,6 +37,20 @@ function App({ userName, children, ...rest }: AppProps) {
       <StyledButton>hello, I am from emotion</StyledButton>
       {greeter(userName)}
       {children}
+      <Flex justifyContent={'center'}>
+        <Box
+          style={{
+            border: 'solid 2px yellow',
+            flexBasis: '50%',
+            background: 'lightblue',
+          }}
+          padding={'large'}
+          margin={'large'}
+          flexGrow={0}
+        >
+          Flex Item 50%
+        </Box>
+      </Flex>
       <Flex
         padding={['small', 'small', 'medium', 'large']}
         style={{
@@ -45,13 +58,11 @@ function App({ userName, children, ...rest }: AppProps) {
           background: 'orange',
         }}
         flexWrap="wrap"
-        className={styles.reset}
       >
         {[1, 2, 3].map((item) => {
           return (
             <Box
               key={item}
-              className={styles.reset}
               style={{
                 border: 'solid 2px yellow',
                 flexBasis: '20%',
@@ -70,7 +81,6 @@ function App({ userName, children, ...rest }: AppProps) {
             flexBasis: '40%',
             background: 'pink',
           }}
-          className={styles.reset}
           padding={{ xs: 'small', sm: 'medium' }}
           margin={{ xs: 'none' }}
         >
