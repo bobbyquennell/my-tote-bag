@@ -4,7 +4,7 @@ import React from 'react';
 import greeter from 'greeter';
 import styled from '@emotion/styled';
 import { createStyleObject } from '@capsizecss/core';
-import { Box, Flex, Stack } from '@shared/ui-components';
+import { Box, Flex, Stack, Text } from '@shared/ui-components';
 interface AppProps extends React.ComponentProps<'div'> {
   userName: string;
   children: React.ReactNode;
@@ -37,7 +37,28 @@ function App({ userName, children, ...rest }: AppProps) {
       <StyledButton>hello, I am from emotion</StyledButton>
       {greeter(userName)}
       {children}
+
+      <Text weight="strong" size="standard" align="center">
+        Hello Word
+      </Text>
+      <Text weight="strong" size="standard" align="center">
+        Hello Word
+      </Text>
       <Flex justifyContent={'center'}>
+        <Box
+          style={{
+            border: 'solid 2px yellow',
+            flexBasis: '50%',
+            background: 'lightblue',
+          }}
+          padding={'small'}
+          margin={'large'}
+          flexGrow={1}
+        >
+          <Text weight="strong" size="standard" align="center">
+            Flex Item 50%
+          </Text>
+        </Box>
         <Box
           style={{
             border: 'solid 2px yellow',
@@ -48,7 +69,9 @@ function App({ userName, children, ...rest }: AppProps) {
           margin={'large'}
           flexGrow={0}
         >
-          Flex Item 50%
+          <Text weight="strong" size="standard" align="center">
+            Flex Item 50%
+          </Text>
         </Box>
       </Flex>
       <Flex
@@ -68,10 +91,10 @@ function App({ userName, children, ...rest }: AppProps) {
                 flexBasis: '20%',
                 background: 'lightblue',
               }}
-              padding={{ xs: 'small', sm: 'medium' }}
+              padding={'large'}
               margin={{ xs: 'none' }}
             >
-              Flex Item 20% {item}
+              <span>Flex Item 20% {item}</span>
             </Box>
           );
         })}
@@ -81,10 +104,12 @@ function App({ userName, children, ...rest }: AppProps) {
             flexBasis: '40%',
             background: 'pink',
           }}
-          padding={{ xs: 'small', sm: 'medium' }}
+          padding={'large'}
           margin={{ xs: 'none' }}
         >
-          Flex Item 40%
+          <Text align="left" size="standard">
+            Flex Item 40%
+          </Text>
         </Box>
       </Flex>
       <Stack space={['small', 'medium', 'large']}>
@@ -96,7 +121,7 @@ function App({ userName, children, ...rest }: AppProps) {
               textAlign="center"
               padding={['small', 'medium', 'large']}
             >
-              stack item {item}
+              <span>stack item {item}</span>
             </Box>
           );
         })}
