@@ -4,7 +4,7 @@ import React from 'react';
 import greeter from 'greeter';
 import styled from '@emotion/styled';
 import { createStyleObject } from '@capsizecss/core';
-import { Box, Flex, Stack, Text } from '@shared/ui-components';
+import { Box, Flex, Stack, Text, Heading } from '@shared/ui-components';
 interface AppProps extends React.ComponentProps<'div'> {
   userName: string;
   children: React.ReactNode;
@@ -38,11 +38,21 @@ function App({ userName, children, ...rest }: AppProps) {
       {greeter(userName)}
       {children}
 
-      <Stack space={['small', 'small', 'medium', 'large']}>
-        <Text size="xsmall">Hello Word</Text>
-        <Text size="small">Hello Word</Text>
-        <Text size="regular">Hello Word</Text>
-        <Text size="large">Hello Word</Text>
+      <Stack space="large">
+        <Stack space="medium">
+          <Heading>Hello World h1</Heading>
+          <Heading level="2">Hello World h2</Heading>
+          <Heading level="3">Hello World h3</Heading>
+          <Heading level="4">Hello World h4</Heading>
+          <Heading level="5">Hello World h5</Heading>
+          <Heading level="6">Hello World h6</Heading>
+        </Stack>
+        <Stack space="medium">
+          <Text size="xsmall">Text xsmall</Text>
+          <Text size="small">Text small</Text>
+          <Text size="regular">Text regular</Text>
+          <Text size="large">Text large</Text>
+        </Stack>
       </Stack>
       <Flex justifyContent={'center'}>
         <Box

@@ -12,3 +12,19 @@ export function useTextStyle({
 }: UseTextStyleProps) {
   return clsx(styles.fontFamily, styles.fontWeight[weight], styles.text[size]);
 }
+export type HeadingLevel = '1' | '2' | '3' | '4' | '5' | '6';
+export type HeadingWeight = 'regular' | 'weak';
+export interface UseHeadingStyleProps {
+  weight?: HeadingWeight;
+  level: HeadingLevel;
+}
+export function useHeadingStyle({
+  weight = 'regular',
+  level = '1',
+}: UseHeadingStyleProps) {
+  return clsx(
+    styles.fontFamily,
+    styles.headingWeight[weight],
+    styles.heading[level],
+  );
+}
