@@ -38,12 +38,12 @@ function App({ userName, children, ...rest }: AppProps) {
       {greeter(userName)}
       {children}
 
-      <Text weight="strong" size="standard" align="center">
-        Hello Word
-      </Text>
-      <Text weight="strong" size="standard" align="center">
-        Hello Word
-      </Text>
+      <Stack space={['small', 'small', 'medium', 'large']}>
+        <Text size="xsmall">Hello Word</Text>
+        <Text size="small">Hello Word</Text>
+        <Text size="regular">Hello Word</Text>
+        <Text size="large">Hello Word</Text>
+      </Stack>
       <Flex justifyContent={'center'}>
         <Box
           style={{
@@ -55,7 +55,7 @@ function App({ userName, children, ...rest }: AppProps) {
           margin={'large'}
           flexGrow={1}
         >
-          <Text weight="strong" size="standard" align="center">
+          <Text weight="regular" size="small" align="center">
             Flex Item 50%
           </Text>
         </Box>
@@ -69,7 +69,7 @@ function App({ userName, children, ...rest }: AppProps) {
           margin={'large'}
           flexGrow={0}
         >
-          <Text weight="strong" size="standard" align="center">
+          <Text weight="strong" size="xsmall" align="center">
             Flex Item 50%
           </Text>
         </Box>
@@ -107,7 +107,7 @@ function App({ userName, children, ...rest }: AppProps) {
           padding={'large'}
           margin={{ xs: 'none' }}
         >
-          <Text align="left" size="standard">
+          <Text align="left" size="xsmall">
             Flex Item 40%
           </Text>
         </Box>

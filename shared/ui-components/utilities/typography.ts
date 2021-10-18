@@ -8,7 +8,7 @@ export interface UseTextStyleProps {
 
 export function useTextStyle({
   weight = 'regular',
-  size = 'standard',
+  size = 'regular',
 }: UseTextStyleProps) {
   return clsx(styles.fontFamily, styles.fontWeight[weight], styles.text[size]);
 }

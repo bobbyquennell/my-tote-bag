@@ -46,10 +46,23 @@ export const fontWeight = styleVariants({
   strong: { fontWeight: 700 },
 });
 
-const xsTextDefinitionsResponsive: TextDefinitionResponsive = {
-  sm: { fontSize: 18, leading: 24, fontMetrics },
-  md: { fontSize: 16, leading: 22, fontMetrics },
+const xsmallTextDefinitionsResponsive: TextDefinitionResponsive = {
+  sm: { fontSize: 14, leading: 24, fontMetrics },
+  md: { fontSize: 14, leading: 24, fontMetrics },
 };
+const smallTextDefinitionsResponsive: TextDefinitionResponsive = {
+  sm: { fontSize: 16, leading: 24, fontMetrics },
+  md: { fontSize: 16, leading: 24, fontMetrics },
+};
+const regularTextDefinitionsResponsive: TextDefinitionResponsive = {
+  sm: { fontSize: 18, leading: 32, fontMetrics },
+  md: { fontSize: 18, leading: 32, fontMetrics },
+};
+const largeTextDefinitionsResponsive: TextDefinitionResponsive = {
+  sm: { fontSize: 22, leading: 36, fontMetrics },
+  md: { fontSize: 22, leading: 36, fontMetrics },
+};
+
 const makeTypographyRules = (
   textDefinition: TextDefinitionResponsive,
   debug?: string,
@@ -66,5 +79,8 @@ const makeTypographyRules = (
 };
 
 export const text = {
-  standard: makeTypographyRules(xsTextDefinitionsResponsive, 'standard'),
+  xsmall: makeTypographyRules(xsmallTextDefinitionsResponsive, 'xsmall'),
+  small: makeTypographyRules(smallTextDefinitionsResponsive, 'small'),
+  regular: makeTypographyRules(regularTextDefinitionsResponsive, 'regular'),
+  large: makeTypographyRules(largeTextDefinitionsResponsive, 'large'),
 };

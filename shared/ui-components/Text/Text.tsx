@@ -13,9 +13,9 @@ export interface TextProps extends Pick<BoxProps, 'component'> {
 export const Text = ({
   id,
   component = 'span',
-  size,
-  weight,
-  align,
+  size = 'regular',
+  weight = 'regular',
+  align = 'center',
   children,
 }: TextProps) => {
   const textStyles = useTextStyle({ weight, size });
