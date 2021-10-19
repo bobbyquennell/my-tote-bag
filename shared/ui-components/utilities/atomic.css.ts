@@ -33,6 +33,14 @@ const responsiveAtomicProperties = defineProperties({
       inlineBlock: 'inline-block',
       flex: 'flex',
     },
+    borderRadius: {
+      none: '0px',
+      small: '4px',
+      regular: '6px',
+      medium: '8px',
+      large: '12px',
+      full: '9999px',
+    },
     // flex container properties
     flexDirection: {
       row: 'row',

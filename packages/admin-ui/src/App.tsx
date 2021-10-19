@@ -54,6 +54,113 @@ function App({ userName, children, ...rest }: AppProps) {
           <Text size="large">Text large</Text>
         </Stack>
       </Stack>
+      <Stack space="medium">
+        <Box
+          style={{
+            border: 'solid 2px yellow',
+            flexBasis: '50%',
+            background: 'lightblue',
+          }}
+          padding={'large'}
+          margin={'large'}
+          flexGrow={0}
+          borderRadius="none"
+        >
+          <Text weight="regular" size="small" align="center">
+            Border Radius: none
+          </Text>
+        </Box>
+        <Box
+          style={{
+            border: 'solid 2px yellow',
+            flexBasis: '50%',
+            background: 'lightblue',
+          }}
+          padding={'large'}
+          margin={'large'}
+          flexGrow={0}
+          borderRadius="small"
+        >
+          <Text weight="regular" size="small" align="center">
+            Border Radius: small
+          </Text>
+        </Box>
+        <Box
+          style={{
+            border: 'solid 2px yellow',
+            flexBasis: '50%',
+            background: 'lightblue',
+          }}
+          padding={'large'}
+          margin={'large'}
+          flexGrow={0}
+          borderRadius="regular"
+        >
+          <Text weight="regular" size="small" align="center">
+            Border Radius: regular
+          </Text>
+        </Box>
+        <Box
+          style={{
+            border: 'solid 2px yellow',
+            flexBasis: '50%',
+            background: 'lightblue',
+          }}
+          padding={'large'}
+          margin={'large'}
+          flexGrow={0}
+          borderRadius="medium"
+        >
+          <Text weight="regular" size="small" align="center">
+            Border Radius: medium
+          </Text>
+        </Box>
+        <Box
+          style={{
+            border: 'solid 2px yellow',
+            flexBasis: '50%',
+            background: 'lightblue',
+          }}
+          padding={'large'}
+          margin={'large'}
+          flexGrow={0}
+          borderRadius="large"
+        >
+          <Text weight="regular" size="small" align="center">
+            Border Radius: large
+          </Text>
+        </Box>
+        <Box
+          style={{
+            border: 'solid 2px yellow',
+            flexBasis: '50%',
+            background: 'lightblue',
+          }}
+          padding={'large'}
+          margin={'large'}
+          flexGrow={0}
+          borderRadius="full"
+        >
+          <Text weight="regular" size="small" align="center">
+            Border Radius: full
+          </Text>
+        </Box>
+        <Box
+          style={{
+            border: 'solid 2px yellow',
+            flexBasis: '50%',
+            background: 'lightblue',
+          }}
+          padding={'large'}
+          margin={'large'}
+          flexGrow={0}
+          borderRadius={['none', 'regular', 'medium', 'large', 'full']}
+        >
+          <Text weight="regular" size="small" align="center">
+            Border Radius: responsive
+          </Text>
+        </Box>
+      </Stack>
       <Flex justifyContent={'center'}>
         <Box
           style={{
